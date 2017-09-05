@@ -1,16 +1,16 @@
 import pymysql
 
 
-# devdatabasename = "pppcar-supplier-dev"
-# prodatabasename = "pppcar-supplier"
+# devdatabasename = ""
+# prodatabasename = ""
 
-devdatabasename = "mtva-dev"
-prodatabasename = "mtva"
-devUrl = "rm-bp167v39m44a2ygxqo.mysql.rds.aliyuncs.com"
+devdatabasename = ""
+prodatabasename = ""
+devUrl = ""
 devUserName = ""
 devPassward = ""
 
-proUrl = "rm-bp167v39m44a2ygxqo.mysql.rds.aliyuncs.com"
+proUrl = ""
 proUserName = ""
 proPassward = ""
 
@@ -55,12 +55,12 @@ def getAll(host, username, passward, databasename):
 
 
 def compareColumns():
-    devUserName = "pppcar_dev"
-    dev_pw = "pppcar2015Remuszpj"
+    devUserName = ""
+    dev_pw = ""
     devColumnDic = getAll(devUrl, devUserName, dev_pw, devdatabasename)
     # devColumnDic={"test":['id','name','size','price']}
-    proUserName = "pppcar"
-    pro_pw = "pppcar2015remuszpj"
+    proUserName = ""
+    pro_pw = ""
     proColumnDic = getAll(proUrl, proUserName, pro_pw, prodatabasename)
     # proColumnDic={"test":['id','name','size']}
     for table, devColuList in devColumnDic.items():
